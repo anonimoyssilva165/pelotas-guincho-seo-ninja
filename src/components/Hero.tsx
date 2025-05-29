@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="relative z-10 px-4 pt-20 pb-12">
+      <div className="relative z-10 px-4 py-12">
         <div className="max-w-md mx-auto text-center text-white">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">

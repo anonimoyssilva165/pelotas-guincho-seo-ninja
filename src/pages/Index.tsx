@@ -1,5 +1,4 @@
 
-import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import PhotoGallery from '@/components/PhotoGallery';
@@ -11,7 +10,6 @@ import FloatingCallButton from '@/components/FloatingCallButton';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
       <Hero />
       <Services />
       <PhotoGallery />
