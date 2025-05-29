@@ -1,66 +1,74 @@
 
-import { Phone, MapPin, Clock, Mail } from 'lucide-react';
+import { Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const handleCall = () => {
     window.open('tel:+5553991301916', '_self');
   };
 
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/5553991301916?text=Olá, preciso de guincho!', '_blank');
+  };
+
   return (
-    <section id="contato" className="py-20 bg-gray-900 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
+    <section className="py-16 px-4 bg-gray-900">
+      <div className="max-w-md mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-white mb-3">
             Entre em <span className="text-orange-500">Contato</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Precisando de guincho em Pelotas? Entre em contato conosco agora mesmo!
+          <p className="text-gray-300">
+            Atendimento 24h para sua emergência
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="text-center">
-            <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Phone size={32} />
+        <div className="space-y-4 mb-8">
+          <div className="bg-gray-800 rounded-2xl p-5 flex items-center gap-4">
+            <div className="bg-orange-500 rounded-xl p-3">
+              <Phone size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Telefone</h3>
-            <p className="text-gray-300">(53) 99130-1916</p>
+            <div>
+              <h3 className="text-white font-semibold">Telefone</h3>
+              <p className="text-gray-300">(53) 99130-1916</p>
+            </div>
           </div>
           
-          <div className="text-center">
-            <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <MapPin size={32} />
+          <div className="bg-gray-800 rounded-2xl p-5 flex items-center gap-4">
+            <div className="bg-orange-500 rounded-xl p-3">
+              <MapPin size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Endereço</h3>
-            <p className="text-gray-300">Av. Fernando Osório, 245<br />Centro, Pelotas - RS</p>
+            <div>
+              <h3 className="text-white font-semibold">Endereço</h3>
+              <p className="text-gray-300 text-sm">Av. Fernando Osório, 245<br />Centro, Pelotas - RS</p>
+            </div>
           </div>
           
-          <div className="text-center">
-            <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Clock size={32} />
+          <div className="bg-gray-800 rounded-2xl p-5 flex items-center gap-4">
+            <div className="bg-orange-500 rounded-xl p-3">
+              <Clock size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Horário</h3>
-            <p className="text-gray-300">24 horas<br />7 dias por semana</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <MapPin size={32} />
+            <div>
+              <h3 className="text-white font-semibold">Horário</h3>
+              <p className="text-gray-300">24 horas • 7 dias</p>
             </div>
-            <h3 className="text-xl font-bold mb-2">Cobertura</h3>
-            <p className="text-gray-300">Pelotas e região<br />Rio Grande do Sul</p>
           </div>
         </div>
         
-        <div className="text-center bg-orange-500 rounded-lg p-8">
-          <h3 className="text-3xl font-bold mb-4">Precisa de Guincho Agora?</h3>
-          <p className="text-xl mb-6">Ligue para nós e resolva sua emergência rapidamente!</p>
+        <div className="space-y-3">
           <button
             onClick={handleCall}
-            className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg text-xl font-bold flex items-center gap-3 mx-auto transition-colors"
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-lg"
           >
-            <Phone size={24} />
-            (53) 99130-1916
+            <Phone size={20} />
+            LIGAR AGORA
+          </button>
+          
+          <button
+            onClick={handleWhatsApp}
+            className="w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-lg"
+          >
+            <MessageCircle size={20} />
+            WHATSAPP
           </button>
         </div>
       </div>
